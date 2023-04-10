@@ -2,6 +2,29 @@ body {
     background-image: 
 }
 
+#start-button{
+    display: block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 5px;
+    border-color: rgba(255, 217, 0, 0.71);
+    cursor: pointer;
+    
+
+}
+
+#start-button :hover {
+color: rgba(255, 217, 0, 0.71);
+
+}
+
+#timer-container {
+font-style: italic;
+color:rgba(255, 217, 0, 0.71);
+}
+
 #quiz-container {
 background-color:darkgreen;
 max-width: 500px;
@@ -32,6 +55,7 @@ border-radius: 5px;
 cursor: pointer;
 
 }
+
 
 #timer-container {
 text-align: center;
