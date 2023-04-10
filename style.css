@@ -1,5 +1,5 @@
 body {
-    background-image: 
+    
 }
 
 #start-button{
@@ -11,8 +11,6 @@ body {
     border-radius: 5px;
     border-color: rgba(255, 217, 0, 0.71);
     cursor: pointer;
-    
-
 }
 
 #start-button :hover {
