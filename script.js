@@ -2,12 +2,17 @@ var startQuiz = document.getElementById("start-button");
 var quizContainer = document.getElementById("#quiz-container");
 var timerElement = document.getElementById("#timer");
 var submitButton = document.getElementById("#submit-btn");
+var showQuestion 
 var timeLeft = 30;
 var timerInterval;
 
 function startQuiz() {
     timerInterval = set(updateTime, 1000);
     console.log('Start Quiz');
+}
+
+showQuestion() {
+
 }
 
 

@@ -1,3 +1,18 @@
+## Description 
+```
+Timed and tracked Code quiz game with features that include: a start button, timer, score keeper, submit button, and the ability to enter in initials in order to keep track of high scores.
+```
+## Usage
+```
+Github Repo:
+
+Live Site:
+
+Created code through HTML to outline webpage structure for quiz game, created a CSS to design the layout for the game's webpage, and created a javaScript to enable functions throughout the webpage.
+
+```
+
+
 ## User Story
 
 ```
@@ -21,3 +36,4 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
+
