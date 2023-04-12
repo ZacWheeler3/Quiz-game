@@ -67,7 +67,7 @@ function startQuiz() {
     console.log("I click the button");
     startQuizButtonElement.style.display = "none";
     createQuizStage();
-    createQuestionElements();
+    createQuestionElements(0);
 };
 function createQuizStage() {
     var quizContainer = document.createElement("article");
@@ -75,7 +75,7 @@ function createQuizStage() {
     document.body.appendChild(quizContainer)
 };
 function createQuestionElements(currentQuestionData) {
-    // var currentQuestionText = currentQuestionData.question;
+    // var currentQuestionText = currentQuestionData.question; 
     var questionTextBox = document.createElement("h3");
     var choiceOne = document.createElement("button");
     var choiceTwo = document.createElement("button");
@@ -94,7 +94,7 @@ function createQuestionElements(currentQuestionData) {
     choiceContainer.appendChild(choiceThree);
     choiceContainer.appendChild(choiceFour);
 };
-questionContainerElement.textContent = quizQuestions[0].questionText;
+// questionContainerElement.textContent = quizQuestions[0].questionText;
 
 for (var i = 0; i < quizQuestions[0].choices.length; i++) {
     var newChoiceButton = document.createElement("button");
