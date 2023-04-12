@@ -1,7 +1,7 @@
 var startQuizButtonElement = document.getElementById("start-button");
 var questionContainerElement = document.getElementById("question-container");
 var answerContainerElement = document.getElementById("answer-container");
-
+var displayQuestionElement = document.getElementById("")
 var quizQuestions = [
     {
         question: 'Who is the author of The Lord of the Rings?',
@@ -58,6 +58,18 @@ var quizQuestions = [
 
 function startQuiz() {
     console.log("I click the button");
-}
+};
 console.log(startQuizButtonElement);
 startQuizButtonElement.addEventListener("click", startQuiz);
+
+function startQuiz() {
+console.log("I click the button");
+startQuizButtonElement.style.display = "none";
+};
+function questionContainerElement() {
+questionContainerElement.style.display = "block";
+
+}
+
+
+
