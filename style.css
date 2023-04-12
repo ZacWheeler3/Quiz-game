@@ -67,3 +67,12 @@ margin-bottom: 20px;
 
 
 }
+
+.quiz-container {
+display: flex;
+width: 66vw;
+margin: 0 auto;
+border: 1px solid black;
+
+
+}
