@@ -1,7 +1,8 @@
 var startQuizButtonElement = document.getElementById("start-button");
-var questionContainerElement = document.getElementById("question-container");
-var answerContainerElement = document.getElementById("answer-container");
+var questionContainerElement = document.getElementById("question-text");
+var answerContainerElement = document.getElementById("choice-buttons");
 var currentQuestion = 0;
+var timeRemaining = 30;
 
 var quizQuestions = [
     {
@@ -57,36 +58,54 @@ var quizQuestions = [
     },
 ];
 
-function startQuiz() {
-    console.log("I click the button");
-};
+// function startQuiz() {
+//     console.log("I click the button");
+// };
 console.log(startQuizButtonElement);
 startQuizButtonElement.addEventListener("click", startQuiz);
 
 function startQuiz() {
     console.log("I click the button");
     startQuizButtonElement.style.display = "none";
-    createQuizStage();
-    createQuestionElements(0);
-};
+    // createQuizStage();
+    createQuestionElements(quizQuestions[currentQuestion]);
+   var timerInterval = setInterval(function() {
+        timeRemaining--;
+        document.getElementById("timer-container").innerHTML = "Time left: " + timeRemaining;
+        if (timeRemaining <= 0) {
+            clearInterval(timerInterval);
+            var alertTimeout = setTimeout(function() {
+                alert("Time's up!");
+                document.getElementById("timer-container").style.display = "none";
+                currentQuestion++; // increment currentQuestion to progress to the next question
+                if (currentQuestion < quizQuestions.length) {
+                    createQuestionElements(quizQuestions[currentQuestion]);
+                } else {
+                    // quiz is over
+                }
+            }, 1000);
+        }
+    }, 1000);
+}
+
 function createQuizStage() {
     var quizContainer = document.createElement("article");
     quizContainer.classList.add("quiz-container");
-    document.body.appendChild(quizContainer)
-};
+    document.body.appendChild(quizContainer);
+}
 function createQuestionElements(currentQuestionData) {
-    // var currentQuestionText = currentQuestionData.question; 
+    var currentQuestionText = currentQuestionData.questionText;
     var questionTextBox = document.createElement("h3");
-    var choiceOne = document.createElement("button");
+    var choiceOne = document.createElement("button", "click", checkAnswer);
     var choiceTwo = document.createElement("button");
     var choiceThree = document.createElement("button");
     var choiceFour = document.createElement("button");
     var choiceContainer = document.createElement("section");
-    // questionTextBox.textContent = quizQuestions[0].quiz - container;
-    choiceOne.textContent = "choice 1";
-    choiceTwo.textContent = "choice 2";
-    choiceThree.textContent = "choice 3";
-    choiceFour.textContent = "choice 4";
+    questionTextBox.textContent = currentQuestionText;
+    choiceOne.textContent = currentQuestionData.choices[0];
+    choiceTwo.textContent = currentQuestionData.choices[1];
+    choiceThree.textContent = currentQuestionData.choices[2];
+    choiceFour.textContent = currentQuestionData.choices[3];
     var quizContainer = document.querySelector(".quiz-container").appendChild(questionTextBox);
     quizContainer.appendChild(choiceContainer);
     choiceContainer.appendChild(choiceOne);
@@ -100,10 +119,23 @@ for (var i = 0; i < quizQuestions[0].choices.length; i++) {
     var newChoiceButton = document.createElement("button");
     newChoiceButton.textContent = quizQuestions[0].choices[i];
     choiceContainer.appendChild(newChoiceButton);
-
-
-
 };
+function createQuestionElements(currentQuestionData) {
+    // code to create question and answer choice elements
+    choiceOne.addEventListener("click", checkAnswer);
+    choiceTwo.addEventListener("click", checkAnswer);
+    choiceThree.addEventListener("click", checkAnswer);
+    choiceFour.addEventListener("click", checkAnswer);
+  
+    function checkAnswer(event) {
+      var selectedAnswer = event.target.textContent;
+      if (selectedAnswer === currentQuestionData.correctAnswer) {
+        // display "correct" message
+      } else {
+        // display "incorrect" message with correct answer
+      }
+    }
+  }
 
 
 
