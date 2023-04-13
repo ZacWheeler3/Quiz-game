@@ -132,11 +132,7 @@ function displayScore() {
     localStorage.setItem(initials, userScore);
     window.location.href = "highscores.html";
 };
-const highScore = localStorage.getItem('highScore');
-const highScorePlayer = localStorage.getItem('highScorePlayer');
 
-document.getElementById('high-score').textContent = highScore;
-document.getElementById('high-score-player').textContent = highScorePlayer;
 
 
 

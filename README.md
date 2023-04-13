@@ -4,9 +4,9 @@ Timed and tracked Code quiz game with features that include: a start button, tim
 ```
 ## Usage
 ```
-Github Repo:
+Github Repo: https://github.com/ZacWheeler3/Quiz-game
 
-Live Site:
+Live Site: https://zacwheeler3.github.io/Quiz-game/
 
 Created code through HTML to outline webpage structure for quiz game, created a CSS to design the layout for the game's webpage, and created a javaScript to enable functions throughout the webpage.
 
@@ -36,4 +36,4 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
-
+![lotr quiz](https://cdn.discordapp.com/attachments/1085659301005250651/1095929716143308860/lotr.png "Zac's lord of the rings quiz game")
